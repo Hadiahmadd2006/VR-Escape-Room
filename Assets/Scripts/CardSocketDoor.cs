@@ -35,6 +35,7 @@ public class CardSocketDoor : MonoBehaviour
             audioSource.PlayOneShot(cardInsertSound);
         }
 
+        doorAnimator.SetBool("IsIdle", false);
         doorAnimator.SetTrigger("Open");
 
         Debug.Log("Keycard inserted! Door opening...");
