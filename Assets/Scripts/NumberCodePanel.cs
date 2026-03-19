@@ -8,7 +8,7 @@ public class NumberCodePanel : MonoBehaviour
     [Header("Correct Code")]
     [SerializeField] private int[] correctCode = { 4, 7, 2 };
     [Header("Targets")]
-    [SerializeField] private GameObject blastShield;
+    [SerializeField] private GameObject floorclosed1;
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip buttonBeep;
@@ -55,7 +55,7 @@ public class NumberCodePanel : MonoBehaviour
         {
             _solved = true;
             if (audioSource != null && correctSound != null) audioSource.PlayOneShot(correctSound);
-            if (blastShield != null) blastShield.SetActive(false);
+            if (floorclosed1 != null) floorclosed1.SetActive(false);
             if (successUI != null) successUI.SetActive(true);
             GameProgressManager.Instance.SolvePuzzle(2);
         }
