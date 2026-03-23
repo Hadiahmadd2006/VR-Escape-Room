@@ -9,6 +9,7 @@ public class NumberCodePanel : MonoBehaviour
     [SerializeField] private int[] correctCode = { 4, 7, 2 };
     [Header("Targets")]
     [SerializeField] private GameObject floorclosed1;
+    [SerializeField] private Animator doorAnimator;
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip buttonBeep;
@@ -56,6 +57,11 @@ public class NumberCodePanel : MonoBehaviour
             _solved = true;
             if (audioSource != null && correctSound != null) audioSource.PlayOneShot(correctSound);
             if (floorclosed1 != null) floorclosed1.SetActive(false);
+            if (doorAnimator != null)
+            {
+                doorAnimator.SetBool("IsIdle", false);
+                doorAnimator.SetTrigger("Open");
+            }
             if (successUI != null) successUI.SetActive(true);
             GameProgressManager.Instance.SolvePuzzle(2);
         }

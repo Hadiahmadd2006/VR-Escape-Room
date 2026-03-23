@@ -1,2 +1,18 @@
 fileFormatVersion: 2
 guid: 9b7891a99dc1644d19f73a3c4d96f3d0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - floorclosed1: {instanceID: 0}
+  - doorAnimator: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - buttonBeep: {instanceID: 0}
+  - correctSound: {instanceID: 0}
+  - wrongSound: {instanceID: 0}
+  - successUI: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
