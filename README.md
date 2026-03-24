@@ -1,4 +1,3 @@
-# VR-Escape-Room
 # 🔧 VR Escape Room: The Engineering Deck
 
 > **"Warning. Core containment failing. Manual override required."**
