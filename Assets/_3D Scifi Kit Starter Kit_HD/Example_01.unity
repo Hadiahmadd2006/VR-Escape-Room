@@ -103878,7 +103878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "you win \nship stabilized"
+  m_text: "you win \nYou are now\nfree. good job"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -111794,16 +111794,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f9466142ea74194a98b304996d2b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReactorCoreManager
-  socket1: {fileID: 0}
-  socket2: {fileID: 0}
-  socket3: {fileID: 0}
-  socket4: {fileID: 0}
+  socket1: {fileID: 2104829484}
+  socket2: {fileID: 2119520813}
+  socket3: {fileID: 144445576}
+  socket4: {fileID: 664015610}
   correctBlock1: {fileID: 1836975004}
   correctBlock2: {fileID: 342275786}
   correctBlock3: {fileID: 428951686}
   correctBlock4: {fileID: 1699156967}
   physicalButton: {fileID: 909120401}
-  successSpotlight: {fileID: 118973600}
+  successSpotlight: {fileID: 1104976551}
   winUI: {fileID: 118973600}
 --- !u!4 &1736658654
 Transform:

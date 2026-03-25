@@ -18,11 +18,11 @@ public class ReactorCoreManager : MonoBehaviour
     [SerializeField] private XRGrabInteractable correctBlock4;
 
     [Header("Hidden Completion Objects")]
-    [SerializeField] private GameObject physicalButton; 
-    [SerializeField] private GameObject successSpotlight; 
+    [SerializeField] private GameObject physicalButton;
+    [SerializeField] private GameObject successSpotlight;
 
     [Header("Win State UI")]
-    [SerializeField] private GameObject winUI; 
+    [SerializeField] private GameObject winUI;
 
     private bool _combinationCorrect = false;
 
@@ -33,8 +33,58 @@ public class ReactorCoreManager : MonoBehaviour
         if (winUI) winUI.SetActive(false);
     }
 
+    private void OnEnable()
+    {
+        if (socket1 != null)
+        {
+            socket1.selectEntered.AddListener((args) => CheckBlockCombination());
+            socket1.selectExited.AddListener((args) => CheckBlockCombination());
+        }
+        if (socket2 != null)
+        {
+            socket2.selectEntered.AddListener((args) => CheckBlockCombination());
+            socket2.selectExited.AddListener((args) => CheckBlockCombination());
+        }
+        if (socket3 != null)
+        {
+            socket3.selectEntered.AddListener((args) => CheckBlockCombination());
+            socket3.selectExited.AddListener((args) => CheckBlockCombination());
+        }
+        if (socket4 != null)
+        {
+            socket4.selectEntered.AddListener((args) => CheckBlockCombination());
+            socket4.selectExited.AddListener((args) => CheckBlockCombination());
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (socket1 != null)
+        {
+            socket1.selectEntered.RemoveAllListeners();
+            socket1.selectExited.RemoveAllListeners();
+        }
+        if (socket2 != null)
+        {
+            socket2.selectEntered.RemoveAllListeners();
+            socket2.selectExited.RemoveAllListeners();
+        }
+        if (socket3 != null)
+        {
+            socket3.selectEntered.RemoveAllListeners();
+            socket3.selectExited.RemoveAllListeners();
+        }
+        if (socket4 != null)
+        {
+            socket4.selectEntered.RemoveAllListeners();
+            socket4.selectExited.RemoveAllListeners();
+        }
+    }
+
     public void CheckBlockCombination()
     {
+        Debug.Log("ReactorCoreManager: Checking block combination...");
+
         if (_combinationCorrect) return;
 
         if (IsCorrect(socket1, correctBlock1) &&
@@ -44,7 +94,7 @@ public class ReactorCoreManager : MonoBehaviour
         {
             _combinationCorrect = true;
             Debug.Log("Blocks Correct! Reveal the final button.");
-            
+
             if (physicalButton) physicalButton.SetActive(true);
             if (successSpotlight) successSpotlight.SetActive(true);
         }
@@ -61,7 +111,7 @@ public class ReactorCoreManager : MonoBehaviour
 
     private bool IsCorrect(XRSocketInteractor socket, XRGrabInteractable expectedBlock)
     {
-        return socket.hasSelection && socket.firstInteractableSelected != null && 
+        return socket.hasSelection && socket.firstInteractableSelected != null &&
                socket.firstInteractableSelected.transform.gameObject == expectedBlock.gameObject;
     }
 }
