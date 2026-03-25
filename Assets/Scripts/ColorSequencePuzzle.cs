@@ -36,10 +36,26 @@ public class ColorSequencePuzzle : MonoBehaviour
 
     private void OnEnable()
     {
-        if (redButton != null) redButton.selectEntered.AddListener((a) => OnColorPressed(0));
-        if (blueButton != null) blueButton.selectEntered.AddListener((a) => OnColorPressed(1));
-        if (greenButton != null) greenButton.selectEntered.AddListener((a) => OnColorPressed(2));
-        if (yellowButton != null) yellowButton.selectEntered.AddListener((a) => OnColorPressed(3));
+        if (redButton != null) 
+        {
+            redButton.selectEntered.RemoveAllListeners();
+            redButton.selectEntered.AddListener((a) => OnColorPressed(0));
+        }
+        if (blueButton != null) 
+        {
+            blueButton.selectEntered.RemoveAllListeners();
+            blueButton.selectEntered.AddListener((a) => OnColorPressed(1));
+        }
+        if (greenButton != null) 
+        {
+            greenButton.selectEntered.RemoveAllListeners();
+            greenButton.selectEntered.AddListener((a) => OnColorPressed(2));
+        }
+        if (yellowButton != null) 
+        {
+            yellowButton.selectEntered.RemoveAllListeners();
+            yellowButton.selectEntered.AddListener((a) => OnColorPressed(3));
+        }
     }
 
     private void OnDisable()
@@ -54,21 +70,32 @@ public class ColorSequencePuzzle : MonoBehaviour
     {
         if (_solved) return;
         
-        if (audioSource != null && buttonSound != null) audioSource.PlayOneShot(buttonSound);
+        Debug.Log($"[SIMON SAYS] Button {colorIndex} pressed. We are on step {_currentStep}.");
+        
+        if (audioSource != null && buttonSound != null) 
+            audioSource.PlayOneShot(buttonSound);
         
         if (correctSequence[_currentStep] == colorIndex)
         {
             _currentStep++;
+            Debug.Log($"[SIMON SAYS] Correct! Moving to step {_currentStep}.");
             
             if (_currentStep >= correctSequence.Length)
             {
+                Debug.Log("[SIMON SAYS] PUZZLE SOLVED! Opening Door.");
                 _solved = true;
+                
+                if (audioSource != null) audioSource.Stop();
                 if (audioSource != null && correctSound != null) audioSource.PlayOneShot(correctSound);
                 
                 if (doorAnimator != null)
                 {
-                    doorAnimator.SetBool("IsIdle", false);
                     doorAnimator.SetTrigger("Open");
+                    Debug.Log("[SIMON SAYS] 'Open' trigger sent to Door Animator.");
+                }
+                else
+                {
+                    Debug.LogWarning("[SIMON SAYS] ERROR: Door Animator is MISSING in the Inspector!");
                 }
 
                 if (successUI != null) successUI.SetActive(true);
@@ -79,7 +106,9 @@ public class ColorSequencePuzzle : MonoBehaviour
         }
         else
         {
+            Debug.Log($"[SIMON SAYS] WRONG COLOR! They pressed {colorIndex} but we wanted {correctSequence[_currentStep]}. Resetting.");
             _currentStep = 0;
+            if (audioSource != null) audioSource.Stop();
             if (audioSource != null && wrongSound != null) audioSource.PlayOneShot(wrongSound);
         }
     }
