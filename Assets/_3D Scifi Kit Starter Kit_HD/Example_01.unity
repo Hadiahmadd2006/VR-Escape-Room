@@ -5924,7 +5924,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 118973601}
   - {fileID: 909120402}
   - {fileID: 1104976553}
   m_Father: {fileID: 104124959}
@@ -6359,6 +6358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 104124959}
+  - component: {fileID: 104124960}
   m_Layer: 0
   m_Name: ReactorPuzzle
   m_TagString: Untagged
@@ -6379,6 +6379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 84622401}
   - {fileID: 1979824837}
   - {fileID: 1028657634}
   - {fileID: 945845636}
@@ -6392,13 +6393,26 @@ Transform:
   - {fileID: 1042660929}
   - {fileID: 885407778}
   - {fileID: 1736658654}
-  - {fileID: 84622401}
   - {fileID: 2104829482}
   - {fileID: 2119520811}
   - {fileID: 144445574}
   - {fileID: 664015608}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &104124960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104124958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921faabea054043cd9052a9a861e980a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReactorWinOnEnable
+  winUI: {fileID: 118973600}
+  winButton: {fileID: 909120401}
 --- !u!4 &104310367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: d9496913daf444c5c9205545c44d78c4, type: 3}
@@ -6986,16 +7000,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118973600}
   m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.7071066}
-  m_LocalPosition: {x: 0, y: 0, z: 14.493328}
+  m_LocalPosition: {x: 0, y: 0, z: 1.4999981}
   m_LocalScale: {x: 0.009, y: 0.009, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2048858287}
-  m_Father: {fileID: 84622401}
+  m_Father: {fileID: 909120402}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.70914, y: 6.96002}
+  m_AnchoredPosition: {x: -4.200001, y: 2.08}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118973602
@@ -22858,8 +22872,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361038884}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.072, y: 0.693, z: -0.035}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.038002014, y: 0.78200024, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35847,7 +35861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 153982007679157697, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_MoveSpeed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 153982007679157697, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_UseGravity
@@ -54659,6 +54673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 909120402}
+  - component: {fileID: 909120403}
   m_Layer: 0
   m_Name: WIN BUTTON
   m_TagString: Untagged
@@ -54679,10 +54694,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 118973601}
   - {fileID: 1369011171}
   - {fileID: 900531614}
   m_Father: {fileID: 84622401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &909120403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909120401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6958e612a6ca4425094a597655e4e45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowWinUI
+  winUI: {fileID: 118973600}
 --- !u!1 &909391834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: c046375e7bf1c42cdac74810855eae68, type: 3}
@@ -62479,7 +62508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1026216487}
   m_Layer: 0
-  m_Name: AttachPoint
+  m_Name: AttachPoint(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62493,8 +62522,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026216486}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.038, y: 0.82, z: 0.051}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.038002014, y: 0.78200024, z: 0.021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84547,9 +84576,9 @@ GameObject:
   - component: {fileID: 1369011175}
   - component: {fileID: 1369011174}
   - component: {fileID: 1369011173}
-  - component: {fileID: 1369011172}
+  - component: {fileID: 1369011177}
   m_Layer: 0
-  m_Name: Interactable
+  m_Name: Interactable(w)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84571,21 +84600,6 @@ Transform:
   - {fileID: 1958073970}
   m_Father: {fileID: 909120402}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1369011172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369011170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4251b9bbb36b4790a9799250998999e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HoverGlowEffect
-  visualRenderer: {fileID: 1958073971}
-  defaultMaterial: {fileID: 2100000, guid: d22d04f08110242f2a7837d0a36c4b3b, type: 2}
-  glowingMaterial: {fileID: 2100000, guid: 9e02c68d4dc0548c1a2849fcecbc6143, type: 2}
 --- !u!114 &1369011173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84668,7 +84682,19 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 909120403}
+        m_TargetAssemblyTypeName: ShowWinUI, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -84720,6 +84746,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.65732384, y: 1, z: 0.7514329}
   m_Center: {x: -0.6737528, y: 0, z: 1.6770468}
+--- !u!114 &1369011177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369011170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6958e612a6ca4425094a597655e4e45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowWinUI
+  winUI: {fileID: 118973600}
 --- !u!4 &1370330520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 22fc62775f090453b8a270508d2df1a0, type: 3}
@@ -125809,7 +125848,7 @@ GameObject:
   - component: {fileID: 1958073972}
   - component: {fileID: 1958073971}
   m_Layer: 0
-  m_Name: Cube Visuals
+  m_Name: Cube Visuals(w)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129800,7 +129839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012268947}
   m_Layer: 0
-  m_Name: AttachPoint
+  m_Name: AttachPoint(3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131289,7 +131328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2035414110}
   m_Layer: 0
-  m_Name: AttachPoint
+  m_Name: AttachPoint(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131303,8 +131342,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035414109}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.038, y: 0.812, z: -0.013}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.038002014, y: 0.78200024, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
