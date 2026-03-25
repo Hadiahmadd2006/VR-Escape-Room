@@ -8,7 +8,7 @@ public class NumberCodePanel : MonoBehaviour
     [SerializeField] private XRSimpleInteractable[] digitButtons;
     
     [Header("Correct Code")]
-    [SerializeField] private int[] correctCode = { 4, 7, 2 };
+    [SerializeField] private int[] correctCode = { 1, 1, 2 };
     
     [Header("Targets")]
     [SerializeField] private GameObject floorclosed1;
@@ -31,7 +31,6 @@ public class NumberCodePanel : MonoBehaviour
     {
         _playerInput = new int[correctCode.Length];
         _currentIndex = 0;
-        if (successUI != null) successUI.SetActive(false);
     }
 
     private void OnEnable()
@@ -88,7 +87,7 @@ public class NumberCodePanel : MonoBehaviour
             }
         }
 
-        Debug.Log($"[KEYPAD] Checking code... You typed: {whatThePlayerTyped}. The answer is: 472.");
+        Debug.Log($"[KEYPAD] Checking code... You typed: {whatThePlayerTyped}. The answer is: 112.");
 
         if (isCorrect)
         {

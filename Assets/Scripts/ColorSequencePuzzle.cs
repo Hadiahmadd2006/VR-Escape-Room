@@ -70,7 +70,7 @@ public class ColorSequencePuzzle : MonoBehaviour
     {
         if (_solved) return;
         
-        Debug.Log($"[SIMON SAYS] Button {colorIndex} pressed. We are on step {_currentStep}.");
+        Debug.Log($"Button {colorIndex} pressed. We are on step {_currentStep}.");
         
         if (audioSource != null && buttonSound != null) 
             audioSource.PlayOneShot(buttonSound);
@@ -78,11 +78,11 @@ public class ColorSequencePuzzle : MonoBehaviour
         if (correctSequence[_currentStep] == colorIndex)
         {
             _currentStep++;
-            Debug.Log($"[SIMON SAYS] Correct! Moving to step {_currentStep}.");
+            Debug.Log($"Correct! Moving to step {_currentStep}.");
             
             if (_currentStep >= correctSequence.Length)
             {
-                Debug.Log("[SIMON SAYS] PUZZLE SOLVED! Opening Door.");
+                Debug.Log("PUZZLE SOLVED! Opening Door.");
                 _solved = true;
                 
                 if (audioSource != null) audioSource.Stop();
@@ -91,11 +91,11 @@ public class ColorSequencePuzzle : MonoBehaviour
                 if (doorAnimator != null)
                 {
                     doorAnimator.SetTrigger("Open");
-                    Debug.Log("[SIMON SAYS] 'Open' trigger sent to Door Animator.");
+                    Debug.Log("'Open' trigger sent to Door Animator.");
                 }
                 else
                 {
-                    Debug.LogWarning("[SIMON SAYS] ERROR: Door Animator is MISSING in the Inspector!");
+                    Debug.LogWarning("ERROR: Door Animator is MISSING in the Inspector!");
                 }
 
                 if (successUI != null) successUI.SetActive(true);
@@ -106,7 +106,7 @@ public class ColorSequencePuzzle : MonoBehaviour
         }
         else
         {
-            Debug.Log($"[SIMON SAYS] WRONG COLOR! They pressed {colorIndex} but we wanted {correctSequence[_currentStep]}. Resetting.");
+            Debug.Log($"WRONG COLOR! They pressed {colorIndex} but we wanted {correctSequence[_currentStep]}. Resetting.");
             _currentStep = 0;
             if (audioSource != null) audioSource.Stop();
             if (audioSource != null && wrongSound != null) audioSource.PlayOneShot(wrongSound);

@@ -16054,7 +16054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "second digit: \n7\n<---"
+  m_text: "second digit: \n1\n<---"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -42036,8 +42036,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0.050665855, z: 0.0486089}
-  m_Center: {x: 0.043134917, y: -0.0084548, z: 0.027314074}
+  m_Size: {x: 0, y: 0.038914826, z: 0.04782496}
+  m_Center: {x: -0.24440624, y: 0.0002751778, z: 0.007197913}
 --- !u!4 &729816119
 Transform:
   m_ObjectHideFlags: 0
@@ -55834,8 +55834,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28115773, y: 0.062945545, z: 0.063902974}
-  m_Center: {x: 0.02840326, y: -0.00030175174, z: 0.008692868}
+  m_Size: {x: 0, y: 0.044690628, z: 0.04940139}
+  m_Center: {x: -0.1121754, y: -0.0007328306, z: 0.004157546}
 --- !u!4 &930584203
 Transform:
   m_ObjectHideFlags: 0
@@ -67318,8 +67318,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.10121581, y: 0.050665855, z: 0.05896437}
-  m_Center: {x: 0.024374025, y: -0.0084548, z: 0.0446632}
+  m_Size: {x: 0, y: 0.039853495, z: 0.050264508}
+  m_Center: {x: -0.026233884, y: 0.0032848206, z: 0.008835781}
 --- !u!4 &1114894430
 Transform:
   m_ObjectHideFlags: 0
@@ -67881,8 +67881,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18620549, y: 0.04397869, z: 0.052530468}
-  m_Center: {x: -0.07758199, y: 0.034999847, z: 0.00068411976}
+  m_Size: {x: 0, y: 0.042703703, z: 0.04913991}
+  m_Center: {x: -0.12756518, y: 0.0032663106, z: -0.0022127724}
 --- !u!4 &1124865429
 Transform:
   m_ObjectHideFlags: 0
@@ -69622,7 +69622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "first digit: \n4\n--->"
+  m_text: "first digit: \n1\n--->"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -74809,8 +74809,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25076318, y: 0.0674778, z: 0.086007886}
-  m_Center: {x: 0.27004087, y: -0.0033819242, z: -0.008172988}
+  m_Size: {x: 0, y: 0.038338494, z: 0.04706786}
+  m_Center: {x: 0.14465916, y: 0.0065764203, z: 0.010451155}
 --- !u!4 &1222703055
 Transform:
   m_ObjectHideFlags: 0
@@ -80061,7 +80061,7 @@ MonoBehaviour:
   - {fileID: 1222703052}
   - {fileID: 1875797153}
   - {fileID: 1114894427}
-  correctCode: 040000000700000002000000
+  correctCode: 000000000000000001000000
   floorclosed1: {fileID: 720486149}
   doorAnimator: {fileID: 1798964646}
   audioSource: {fileID: 1301180310}
@@ -109767,8 +109767,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5447744, y: 0.08421475, z: 0.08738973}
-  m_Center: {x: -0.22761193, y: 0.01023236, z: 0.009551761}
+  m_Size: {x: 0.33764172, y: 0.044349864, z: 0.051586885}
+  m_Center: {x: -0.12404558, y: 0.003918103, z: 0.008021278}
 --- !u!4 &1749482802
 Transform:
   m_ObjectHideFlags: 0
@@ -117628,8 +117628,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.061872203, y: 0.050665855, z: 0.050802708}
-  m_Center: {x: -0.008661816, y: -0.0084548, z: 0.028166357}
+  m_Size: {x: 0, y: 0.04071504, z: 0.051511616}
+  m_Center: {x: -0.039597858, y: 0.0013597471, z: 0.006204605}
 --- !u!4 &1875797156
 Transform:
   m_ObjectHideFlags: 0
@@ -124974,8 +124974,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.12994756, y: 0.050665855, z: 0.049776077}
-  m_Center: {x: -0.030205145, y: -0.0084548, z: 0.042987168}
+  m_Size: {x: 0, y: 0.043294985, z: 0.053071365}
+  m_Center: {x: -0.09517876, y: -0.0008080931, z: 0.004228611}
 --- !u!4 &1982645136
 Transform:
   m_ObjectHideFlags: 0
@@ -127033,8 +127033,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6031129, y: 0.041847706, z: 0.037271142}
-  m_Center: {x: -0.19844261, y: 0.028203249, z: 0.061124183}
+  m_Size: {x: 0, y: 0.04574066, z: 0.05096952}
+  m_Center: {x: -0.18561246, y: 0.005151494, z: 0.013363448}
 --- !u!4 &2019975441
 Transform:
   m_ObjectHideFlags: 0
