@@ -17,6 +17,9 @@ public class CardSocketDoor : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip cardInsertSound;
 
+    [Header("Feedback")]
+    [SerializeField] private GameObject successUI;
+
     private void Awake()
     {
         _socketInteractor = GetComponent<XRSocketInteractor>();
@@ -57,6 +60,11 @@ public class CardSocketDoor : MonoBehaviour
         if (blockerToRemove != null)
         {
             blockerToRemove.SetActive(false);
+        }
+
+        if (successUI != null)
+        {
+            successUI.SetActive(true);
         }
         
         Debug.Log($"Keycard inserted! Puzzle {puzzleNumberToSolve} solved.");
